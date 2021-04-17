@@ -110,6 +110,28 @@
           УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
           БРОНИ
         </p>
+        <form action="#" method="POST">
+          <input type="text" name="date" placeholder="01.04.2021" />
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input
+              id="appointment-name"
+              type="text"
+              name="name"
+              placeholder="Boroda"
+            />
+          </p>
+          <p>
+            <label for="appointment-name">Телефон</label>
+            <input
+              id="appointment-name"
+              type="tel"
+              name="phone"
+              placeholder="+380956453"
+            />
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer>
@@ -139,7 +161,33 @@
     </footer>
     <section>
       <h2>Личный кабинет</h2>
-      <p>Введите пожалуйста свой логин и пароль</p>
+      <p>Введите свой пароль и логин</p>
+      <form action="#" method="POST">
+        <p>
+          <label for="login-login">Логин</label>
+          <input
+            id="login-login"
+            type="email"
+            name="login"
+            placeholder="email@example.com"
+          />
+        </p>
+        <p>
+          <label for="login-login">Пароль</label>
+          <input
+            id="login-password"
+            type="password"
+            name="password"
+            placeholder="******"
+          />
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="remember" />Запомнить меня
+          </label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+      </form>
       <button type="button">Закрыть</button>
     </section>
     <section>
