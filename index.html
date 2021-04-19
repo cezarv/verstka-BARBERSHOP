@@ -4,34 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Барбершоп Бородинский</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <img
-            src="images/logo-index.svg"
-            width="368"
-            height="153"
-            alt="лого"
-          />
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Прайс-лист</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <a href="blank.html">Вход</a>
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="">
+          <img src="images/logo-index.svg" width="368" height="153" alt="лого"
+        /></a>
+        <div class="main-navigation-wrapper">
+          <div class="container">
+            <ul class="site-navigation">
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Прайс-лист</a></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="user-navigation">
+              <a class="login-link" href="blank.html">Вход</a>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <h1>Барбершоп</h1>
-      <section>
+    <main class="container">
+      <h1 class="visually-headen">Барбершоп</h1>
+      <section class="features">
         <h2>Преимущества</h2>
-        <ul>
-          <li>
-            <h3>Schnell</h3>
+        <ul class="features-list">
+          <li class="feature-item">
+            <h3>Быстро</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               animi temporibus tenetur rerum molestias ullam fuga aspernatur
