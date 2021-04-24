@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп Бородинский</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
+    <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
-      rel="stylesheet"
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -38,8 +37,8 @@
     <main class="container">
       <h1 class="visually-headen">Барбершоп</h1>
       <section class="features">
-        <h2>Преимущества</h2>
-        <ul class="features-list">
+        <h2 class="visually-headen">Преимущества</h2>
+        <ul class="feature-list">
           <li class="feature-item">
             <h3>Быстро</h3>
             <p>
@@ -49,7 +48,7 @@
               voluptatem accusamus exercitationem veniam nostrum.
             </p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Cool</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -58,7 +57,7 @@
               suscipit. Voluptatibus, doloremque.
             </p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>Expensive</h3>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
@@ -69,17 +68,18 @@
           </li>
         </ul>
       </section>
-      <section>
+      <div class="index-columns">
+      <section class="news">
         <h2>НОВОСТИ</h2>
-        <ul>
-          <li>
+        <ul class="news-list">
+          <li class="news-item">
             <p>
               НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ
               СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
             </p>
             <time datetime="2020-01-18">18 января</time>
           </li>
-          <li>
+          <li class="news-item">
             <p>
               В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ
               МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
@@ -87,19 +87,24 @@
             </p>
           </li>
         </ul>
-        <a href="#">ВСЕ НОВОСТИ</a>
+        <a href="#">Все новости</a>
       </section>
-      <section>
+      <section class="gallery">
         <h2>Фотогалерея</h2>
-        <figure>
+        <div class="gallery-container">
+        <figure class="gallery-content">
           <a href=""
             ><img src="images/studio.png" width="286" height="164" alt=""
           /></a>
         </figure>
-        <button type="button" disabled>Назад</button>
-        <button type="button">Вперед</button>
+        <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+      </div>
       </section>
-      <section>
+    </div>
+  </section>
+  <div class="index-columns">
+      <section class="contacts">
         <h2>КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
         <p>
           БАРБЕРШОП «БОРОДИНСКИЙ» <br />
@@ -111,27 +116,41 @@
           ПН—ПТ: С 10:00 ДО 22:00 <br />
           СБ—ВС: С 10:00 ДО 19:00
         </p>
-        <a href="#">КАК ПРОЕХАТЬ</a>
-        <a href="#">ОБРАТНАЯ СВЯЗЬ</a>
+        <a class="button contacts-button-map" href="#">КАК ПРОЕХАТЬ</a>
+        <a class="button" href="#">ОБРАТНАЯ СВЯЗЬ</a>
       </section>
-      <section>
+      <section class="appointment">
         <h2>ЗАПИСАТЬСЯ</h2>
-        <p>
+        <p class="appointment-info">
           УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
           БРОНИ
         </p>
-        <form action="#" method="POST">
-          <input type="text" name="date" placeholder="01.04.2021" />
-          <p>
+        <form class="appointment-form" action="#" method="POST">
+          <p class="apointment-item">
+            <label for="appointment-date">Дата</label>
+            <input type="text" name="date" placeholder="01.04.2021" />
+          </p>
+          
+          <p class="apointment-item">
+            <label for="appointment-time">Время</label>
+            <input
+              id="appointment-time"
+              type="text"
+              name="name"
+              placeholder="8:30">
+            </p>
+
+
+          <p class="apointment-item">
             <label for="appointment-name">Ваше имя</label>
             <input
               id="appointment-name"
               type="text"
               name="name"
-              placeholder="Boroda"
+              placeholder="Петров и Баширов"
             />
           </p>
-          <p>
+          <p class="apointment-item">
             <label for="appointment-name">Телефон</label>
             <input
               id="appointment-name"
@@ -140,13 +159,15 @@
               placeholder="+380956453"
             />
           </p>
-          <button type="submit">Отправить</button>
+          <button class="button" type="submit">Отправить</button>
         </form>
       </section>
     </main>
-    <footer>
-      <section>
-        <h2>Каа нас найти</h2>
+    <div></div>
+    <footer class="page-footer main-footer">
+      <div class="container"> 
+      <section class="footer-contacts">
+        <h2 class="visually-hidden">Каа нас найти</h2>
         <p>
           БАРБЕРШОП «БОРОДИНСКИЙ» <br />
           АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br />
@@ -154,28 +175,40 @@
           ТЕЛЕФОН: +7 (812) 666-02-66
         </p>
       </section>
-      <section>
+      <section class="footer-social">
         <h2>ДАВАЙТЕ ДРУЖИТЬ!</h2>
         <ul>
           <li>
-            <a href="#">Вконтакте</a>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+              <!-- svg -->
+            </a>
           </li>
-          <li>Фейсбук</li>
-          <li>Инстаграм</li>
+          <li>
+            <a class="social-button" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+           </li>
+          <li>
+            <a class="social-button" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+          </li>
         </ul>
       </section>
-      <p>
-        РАЗРАБОТАНО:
-        <a href="#">Tsisar Volodymyr</a>
+      <p class="footer-copyright">
+        <b>РАЗРАБОТАНО:</b> 
+        <a class="button" href="#">Tsisar Volodymyr</a>
       </p>
+      </div>
     </footer>
-    <section>
+    <section class="modal">
       <h2>Личный кабинет</h2>
       <p>Введите свой пароль и логин</p>
-      <form action="#" method="POST">
+      <form class="login-form" action="#" method="POST">
         <p>
-          <label for="login-login">Логин</label>
-          <input
+          <label class="visually-hidden" for="login-login">Логин</label>
+          <input class="login-icon-user"
             id="login-login"
             type="email"
             name="login"
@@ -184,24 +217,26 @@
         </p>
         <p>
           <label for="login-login">Пароль</label>
-          <input
+          <input class="login-icon-password"
             id="login-password"
             type="password"
             name="password"
             placeholder="******"
-          />
+          /> 
         </p>
-        <p>
-          <label>
-            <input type="checkbox" name="remember" />Запомнить меня
+        <p class="login-help">
+          <label class="login-checkbox">
+            <input class="visually-hidden" type="checkbox" name="remember"/>Запомнить меня
           </label>
-          <a href="#">Я забыл пароль!</a>
+          <a class="restore" href="#">Я забыл пароль!</a>
         </p>
+        <button class="button" type="submit">Войти</button>
       </form>
       <button type="button">Закрыть</button>
     </section>
-    <section>
+    <section class="modal">
       <h2>Как до Вас добраться</h2>
+      <!-- Здесь карта -->
       <button type="button">Закрыть</button>
     </section>
   </body>
