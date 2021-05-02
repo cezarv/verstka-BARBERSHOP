@@ -38,7 +38,7 @@ img {
   height: auto;
 }
 
-visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -150,7 +150,7 @@ User navigation  */
 }
 
 .site-navigation a,
-user-navigation a {
+.user-navigation a {
   color: var(--basic-white);
   display: block;
   padding: 25px 20px;
@@ -205,14 +205,34 @@ user-navigation a {
 }
 
 .feature-item {
+  width: 300px;
   text-align: center;
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
 }
 
 .feature-item h3 {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
   font-size: 30px;
   line-height: 42px;
+}
+
+.feature-item h3::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  background-color: var(--basic-white);
+  transform: rotate(45deg);
+}
+
+.feature-item p {
+  margin: 0 10px;
 }
 
 /* Index columns */
@@ -220,10 +240,11 @@ user-navigation a {
 .index-columns {
   display: flex;
   justify-content: space-between;
+  padding: 50px 80px;
   margin-bottom: 35px;
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
-  background-image: url("images/pattern-news.png");
+  background-image: url("images/line1.png"), url("images/pattern-light.png");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
   outline: 5px solid rgba(255, 0, 0, 0.7);
@@ -245,6 +266,9 @@ user-navigation a {
 }
 
 .news-list {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
   list-style: none;
 }
 
@@ -260,7 +284,9 @@ user-navigation a {
   outline-offset: -5px;
 }
 .gallery-container {
+  position: relative;
   height: 260px;
+  outline: 5px solid #ff0000;
 }
 
 .gallery-content {
@@ -272,6 +298,22 @@ user-navigation a {
 .gallery-content img {
   width: 286px;
   height: 164px;
+}
+
+.gallery-button {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-button-back {
+  left: 0;
+}
+
+.gallery-button-next {
+  right: 0;
 }
 
 /* Contacts */
@@ -289,8 +331,8 @@ user-navigation a {
 /* Appointments */
 .appointment {
   width: 300px;
-  outline: 5px solid rgba(255, 230, 0, 0.7);
-  outline-offset: -5px;
+  /* outline: 5px solid rgba(255, 230, 0, 0.7);
+  outline-offset: -5px; */
 }
 
 .appointment-info {
@@ -298,13 +340,31 @@ user-navigation a {
   margin-bottom: 15px;
 }
 
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .appointment-item {
+  width: 140px;
   margin-top: 0;
   margin-bottom: 10px;
+  /* outline: 5px solid rgba(255, 0, 170, 0.7); */
+}
+
+.appointment-item label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
 }
 
 .appointment-item input {
-  width: 140px;
+  width: 108px;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+  padding-left: 15px;
   font: inherit;
   background-color: transparent;
   border: 2px solid var(--basic-black);
@@ -315,6 +375,8 @@ user-navigation a {
 }
 
 .appointment .button {
+  display: block;
+  width: 100%;
   margin-top: 10px;
   margin-right: 0;
 }
@@ -323,6 +385,7 @@ user-navigation a {
 .button {
   display: inline-block;
   margin-right: 16px;
+  padding: 10px 30px;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -425,12 +488,23 @@ user-navigation a {
 
 /* Social button */
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background-color: var(--basic-black);
   color: inherit;
 }
 
 .social-button:hover,
 .social-button:focus {
-  background-color: var var(--basic-white);
+  background-color: var (--basic-white);
+}
+
+.social-button:path,
+.social-button:path {
+  background-color: var (--basic-white);
 }
 
 .footer-copyright {
