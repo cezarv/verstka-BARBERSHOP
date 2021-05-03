@@ -205,9 +205,9 @@
       </div>
     </footer>
   </div>
-    <section class="modal">
+    <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой пароль и логин</p>
+      <p class="modal-description">Введите свой пароль и логин</p>
       <form class="login-form" action="#" method="POST">
         <p>
           <label class="visually-hidden" for="login-login">Логин</label>
@@ -215,11 +215,10 @@
             id="login-login"
             type="email"
             name="login"
-            placeholder="email@example.com"
-          />
+            placeholder="email@example.com">
         </p>
         <p>
-          <label for="login-login">Пароль</label>
+          <label class="visually-hidden" for="login-login">Пароль</label>
           <input class="login-icon-password"
             id="login-password"
             type="password"
@@ -229,18 +228,21 @@
         </p>
         <p class="login-help">
           <label class="login-checkbox">
-            <input class="visually-hidden" type="checkbox" name="remember"/>Запомнить меня
+            <input class="visually-hidden" type="checkbox" name="remember"> 
+            <span class="checkbox-indicator" ></span>  
+            Запомнить меня
           </label>
           <a class="restore" href="#">Я забыл пароль!</a>
         </p>
         <button class="button" type="submit">Войти</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal">
-      <h2>Как до Вас добраться</h2>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden" >Как до нас добраться</h2>
       <!-- Здесь карта -->
-      <button type="button">Закрыть</button>
+      <img src="images/map.png" width="766" height="560" alt="Офис компании по адресу ул. Джона Леннона 2/9"> 
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>

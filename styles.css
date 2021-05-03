@@ -521,6 +521,12 @@ User navigation  */
 /* Modal */
 
 .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
   background-image: url ("images/pattern-news.png");
@@ -528,6 +534,49 @@ User navigation  */
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
+
+/* Modal-close*/
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-dark);
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/* Modal-log in */
+
+.modal-login {
+  display: none;
+  top:20px;
+  bottom:auto;
+  width:300px;
+  padding:50px 80px;
+}
+
 
 .modal-login h2 {
   margin: 0;
@@ -541,6 +590,39 @@ User navigation  */
   margin-bottom: 10px;
 }
 
+/* Modal login */
+
+.modal-login {
+  top: 120px;
+  bottom: auto;
+  width: 300px;
+  padding: 50px 80px;
+}
+
+.modal-login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Modal map */
+
+.modal-map {
+  width:766px;
+  height:560px;
+  border:7px solid white;
+}
+
+.modal-map img {
+  display: block;
+}
+
 /* Login form */
 
 .login-form p {
@@ -550,6 +632,12 @@ User navigation  */
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
+  box-sizing: border-box;
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 15px;
   font: inherit;
   color: var(--basic-black);
   text-transform: uppercase;
