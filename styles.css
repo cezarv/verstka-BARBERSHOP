@@ -526,6 +526,7 @@ User navigation  */
   right: 0;
   bottom: 0;
   left: 0;
+  display: none;
   margin: auto;
   color: var(--basic-black);
   background-color: var(--basic-extra-light);
@@ -533,6 +534,15 @@ User navigation  */
   background-position: 0 0;
   background-repeat: repeat;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /* Modal-close*/
@@ -571,12 +581,11 @@ User navigation  */
 
 .modal-login {
   display: none;
-  top:20px;
-  bottom:auto;
-  width:300px;
-  padding:50px 80px;
+  top: 20px;
+  bottom: auto;
+  width: 300px;
+  padding: 50px 80px;
 }
-
 
 .modal-login h2 {
   margin: 0;
@@ -588,6 +597,27 @@ User navigation  */
 .modal-description {
   margin: 0;
   margin-bottom: 10px;
+}
+
+/* Modal-map */
+
+.modal-map {
+  width: 766px;
+  height: 560px;
+  border: 7px solid white;
+}
+
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
 }
 
 /* Modal login */
@@ -614,9 +644,9 @@ User navigation  */
 /* Modal map */
 
 .modal-map {
-  width:766px;
-  height:560px;
-  border:7px solid white;
+  width: 766px;
+  height: 560px;
+  border: 7px solid white;
 }
 
 .modal-map img {
@@ -678,3 +708,25 @@ User navigation  */
 }
 
 /* Grid  */
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
