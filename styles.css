@@ -70,8 +70,8 @@ input[type="radio"].visually-hidden {
 
 .main-header {
   margin-bottom: 70px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /* outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px; */
 }
 
 /* Main-Navigation */
@@ -93,8 +93,8 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
   margin-bottom: 70px;
-  outline: 5px solid rgba(255, 0, 200, 0.3);
-  outline-offset: -5px;
+  /* outline: 5px solid rgba(255, 0, 200, 0.3);
+  outline-offset: -5px; */
 }
 
 /* Container */
@@ -115,8 +115,6 @@ input[type="radio"].visually-hidden {
   order: 2;
   width: 368px;
   height: 153px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
 }
 
 /* Site Navigation */
@@ -128,8 +126,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   min-height: 70px;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
   list-style: none;
 }
 
@@ -145,8 +141,6 @@ User navigation  */
 
 .user-navigation {
   max-width: 140px;
-  outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px;
 }
 
 .site-navigation a,
@@ -191,8 +185,7 @@ User navigation  */
 
 /* Features */
 .features {
-  margin-bottom: 80px;
-  outline: 5px solid rgba(255, 0, 255, 0.3);
+  margin-bottom: 40px;
 }
 
 .feature-list {
@@ -207,8 +200,6 @@ User navigation  */
 .feature-item {
   width: 300px;
   text-align: center;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
 }
 
 .feature-item h3 {
@@ -247,7 +238,7 @@ User navigation  */
   background-image: url("images/line1.png"), url("images/pattern-light.png");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
+  /* outline: 5px solid rgba(255, 0, 0, 0.7); */
 }
 
 .index-columns h2 {
@@ -261,8 +252,6 @@ User navigation  */
 
 .news {
   width: 380px;
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
 }
 
 .news-list {
@@ -280,13 +269,10 @@ User navigation  */
 
 .gallery {
   width: 300px;
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
 }
 .gallery-container {
   position: relative;
   height: 260px;
-  outline: 5px solid #ff0000;
 }
 
 .gallery-content {
@@ -319,8 +305,6 @@ User navigation  */
 /* Contacts */
 .contacts {
   width: 380px;
-  outline: 5px solid rgba(115, 255, 0, 0.7);
-  outline-offset: -5px;
 }
 
 .contacts p {
@@ -429,8 +413,6 @@ User navigation  */
   background-image: url("images/pattern-footer.png");
   background-position: 0 0;
   background-repeat: repeat;
-  outline: 5px solid rgba(81, 28, 94, 0.911);
-  outline-offset: -5px;
 }
 
 .main-footer .container {
@@ -441,8 +423,6 @@ User navigation  */
 .footer-contacts {
   margin: 0;
   width: 320px;
-  outline: 5px solid rgba(109, 119, 172, 0.911);
-  outline-offset: -5px;
 }
 
 .footer-contacts p {
@@ -460,10 +440,9 @@ User navigation  */
 
 .footer-social {
   width: 145px;
+
   justify-self: center;
   text-align: center;
-  outline: 5px solid rgba(149, 233, 70, 0.911);
-  outline-offset: -5px;
 }
 
 .footer-social ul {
@@ -482,11 +461,15 @@ User navigation  */
   margin: 0;
   justify-self: end;
   text-align: center;
-  outline: 5px solid rgba(233, 217, 70, 0.911);
-  outline-offset: -5px;
 }
 
 /* Social button */
+
+.container-social {
+  display: flex;
+  flex-direction: row;
+}
+
 .social-button {
   display: flex;
   align-items: center;
@@ -507,10 +490,10 @@ User navigation  */
   background-color: var (--basic-white);
 }
 
-.footer-copyright {
+/* .footer-copyright {
   outline: 5px solid rgba(81, 28, 94, 0.911);
   outline-offset: -5px;
-}
+} */
 
 .footer-copyright .button:hover,
 .footer-copyright .button:focus {

@@ -1,8 +1,9 @@
+
 var loginLink = document.querySelector(".login-link");
 var loginPopup = document.querySelector(".modal-login");
-var loginClose = document.querySelector(".modal-close");
+var loginClose = loginPopup.querySelector(".modal-close");
+var loginLogin = loginPopup.querySelector(".login-icon-user");
 var loginForm = loginPopup.querySelector(".login-form");
-var loginLogin = popup.querySelector(".login-icon-user");
 var loginpassword = loginPopup.querySelector(".login-icon-password");
 
 var isStorageSupport = true;
@@ -15,7 +16,7 @@ try {
 
 loginLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal-show");
+  loginPopup.classList.add("modal-show");
 
   if (storage) {
     loginLogin.value = storage;
